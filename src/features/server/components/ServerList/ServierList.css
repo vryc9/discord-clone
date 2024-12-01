@@ -1,0 +1,19 @@
+.list-server-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 100%;
+    padding-top: 0.5rem;
+    gap : 0.5rem;
+    overflow-y: hidden;
+    
+}
+
+span {
+    width: 2rem;
+    height: 2px;
+    background-color: #36393F;
+}
+
+        

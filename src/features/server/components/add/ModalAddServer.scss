@@ -1,0 +1,126 @@
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #36393f;
+    border-radius: 10px;
+    width: 440px;
+    height: 440px;
+    .modal-header {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 24px 0;
+      gap: 8px;
+      position: relative;
+      strong {
+        color: white;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .description {
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      button {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        height: 26px;
+        padding: 4px;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0.5;
+        cursor: pointer;
+        border-radius: 3px;
+        color: var(--interactive-normal);
+        box-sizing: content-box;
+        border: none;
+        background-color: transparent;
+        svg {
+          width: 24;
+          height: 24;
+          fill: none;
+        }
+      }
+    }
+    .modal-body {
+      margin: 16px 0;
+      padding: 0 16px;
+      .upload-icon {
+        display: flex;
+        justify-content: center;
+        padding-top: 4px;
+        .icon-container {
+          height: 80px;
+          position: relative;
+          width: 80px;
+          svg {
+            width: 80;
+            height: 80;
+            color: rgba(255, 255, 255, 0.7);
+          }
+          input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            font-size: 0px;
+          }
+        }
+      }
+      .name-input-container {
+        margin-top: 24px;
+        .field-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          label {
+            font-size: 12px;
+            line-height: 1.3333333333333333;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+        .input-container {
+          display: flex;
+          flex-direction: column;
+          outline: 0;
+          input {
+            padding: 10px;
+            height: 40px;
+            font-size: 16px;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 3px;
+            color: white;
+            background-color: color-mix(
+              in oklab,
+              hsl(225 calc(1 * 6.25%) 12.549% / 1) 100%,
+              var(--theme-base-color, black) var(--theme-base-color-amount, 0%)
+            );
+            border: none;
+            transition: border-color 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
