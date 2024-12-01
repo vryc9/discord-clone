@@ -23,7 +23,7 @@ export async function client<T>(
         headers: {
             ...headers,
             ...customConfig.headers,
-        },
+        },  
     }
 
     if (body instanceof FormData) {

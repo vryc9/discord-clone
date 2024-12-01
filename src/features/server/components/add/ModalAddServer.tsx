@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAppDispatch } from "../../../../store/hooks";
 import "./ModalAddServer.scss";
 import { addServer } from "../../serverSlice";
+import Input from "../../../../components/ui/Input";
 
 type ModalAddServerProps = {
   onClose: () => void;
@@ -9,10 +10,15 @@ type ModalAddServerProps = {
 
 const ModalAddServer = ({ onClose }: ModalAddServerProps) => {
   const [fileUpdated, setFileUpdated] = useState<File | null>(null);
+  const [inputValue, setInputValue] = useState<string>("");
   const dispatch = useAppDispatch();
 
   const handleModalClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,11 +104,13 @@ const ModalAddServer = ({ onClose }: ModalAddServerProps) => {
               <div className="field-wrapper">
                 <label htmlFor="server-name">Nom du serveur</label>
                 <div className="input-container">
-                  <input
-                    placeholder="Nom du serveur"
-                    type="text"
+                  <Input
+                    placeHolder="Nom du serveur"
                     name="server-name"
                     id="server-name"
+                    type="text"
+                    onChange={handleInputChange}
+                    value={inputValue}
                   />
                 </div>
               </div>

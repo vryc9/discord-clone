@@ -26,11 +26,8 @@ const ServerList = () => {
       <img src={discord_heading} alt="discord-heading" />
       <ServerListItems serverImage={discord_icon} isIcon={true} />
       <span className="separator"></span>
-      {allServeur.map((serveur) => (
-        <ServerListItems
-          key={serveur.id}
-          serverImage={decodeImage(serveur.serverPicture)}
-        />
+      {allServeur.map(({ id, serverPicture }) => (
+        <ServerListItems key={id} serverImage={decodeImage(serverPicture)} />
       ))}
       <ServerListItems serverImage={plus} isIcon={true} />
       <ServerListItems serverImage={browse} isIcon={true} />

@@ -1,0 +1,30 @@
+.input-text-type {
+  padding: 10px;
+  height: 40px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  background-color: color-mix(
+    in oklab,
+    hsl(225 calc(1 * 6.25%) 12.549% / 1) 100%,
+    var(--theme-base-color, black) var(--theme-base-color-amount, 0%)
+  );
+  border: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input-button-type {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  background-color: #202225;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}

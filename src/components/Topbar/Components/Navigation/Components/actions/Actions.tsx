@@ -31,9 +31,9 @@ const Actions = () => {
   ];
   return (
     <ul>
-      {actions.map((action, index) => (
-        <li key={index} onClick={action.action}>
-          <img src={action.icon} alt="action-icon" />
+      {actions.map(({action, icon}, index) => (
+        <li key={index} onClick={action}>
+          <img src={icon} alt="action-icon" />
         </li>
       ))}
     </ul>
