@@ -12,9 +12,9 @@ export async function client<T>(
 ): Promise<ClientResponse<T>> {
 
     const url = `http://localhost:8080/${endpoint}`
-    
-    const headers: HeadersInit = body instanceof FormData 
-        ? {} 
+
+    const headers: HeadersInit = body instanceof FormData
+        ? {}
         : { 'Content-Type': 'application/json' }
 
     const config: RequestInit = {
@@ -23,7 +23,7 @@ export async function client<T>(
         headers: {
             ...headers,
             ...customConfig.headers,
-        },  
+        },
     }
 
     if (body instanceof FormData) {

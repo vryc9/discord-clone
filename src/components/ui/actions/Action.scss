@@ -1,0 +1,19 @@
+.action-items {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+  color: #83868c;
+  &:hover {
+    background-color: #393c43;
+  }
+}
+
+.active {
+  background-color: #393c43;
+}
+
+

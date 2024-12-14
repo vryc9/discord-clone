@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { client } from "../../api/client";
+import { client } from "../../utils/client";
 import { createAppAsyncThunk } from "../../store/withTypes";
 import { Server } from "./models/Server";
 import { RootState } from "../../store/store";
@@ -32,8 +32,8 @@ const serverSlice = createSlice({
         builder.addCase(fetchAllServers.fulfilled, (state, action) => {
             state.servers = action.payload;
         });
-        builder.addCase(addServer.fulfilled, (state, action) => {
-            state.servers.push(action.payload)
+        builder.addCase(addServer.fulfilled, ({ servers }, { payload }) => {
+            servers.push(payload)
         })
     }
 })
