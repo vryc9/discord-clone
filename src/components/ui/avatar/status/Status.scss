@@ -1,0 +1,22 @@
+.status-indicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #2f3136;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2f3136;
+    .indicator {
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: red;
+      z-index: 1;
+    }
+  }
+  

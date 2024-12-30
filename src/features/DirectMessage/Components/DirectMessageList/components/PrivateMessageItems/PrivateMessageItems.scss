@@ -1,0 +1,14 @@
+.private-message-items-container {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  gap: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #83868c;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #36393f;
+  }
+}
